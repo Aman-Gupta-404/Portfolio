@@ -1,0 +1,128 @@
+.work__section {
+  width: 100%;
+  padding: 30px var(--pagePadding);
+}
+
+.work__section--heading {
+  width: 100%;
+  text-align: center;
+}
+
+.work__section--subHeading {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.work__section--subHeading--span {
+  /* text-decoration: underline; */
+  font-weight: bold;
+}
+
+.work__section__header {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  padding-left: 10px;
+  font-size: 1.8rem;
+}
+
+.work__section__header--line {
+  width: 80%;
+  margin: auto;
+  height: 1px;
+  border: none;
+  background-color: lightgrey;
+}
+
+/* work card */
+.work__card {
+  width: 80%;
+  margin: 50px auto 100px auto;
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 15px;
+}
+
+#work__card--reverse {
+  flex-direction: row-reverse;
+}
+
+.work__card--imageContainer {
+  width: 500px;
+  height: 300px;
+  /* position: absolute; */
+  right: 0%;
+  z-index: 1;
+}
+
+.work__card__img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 5px;
+  border: 0.5px solid lightgray;
+}
+
+.work__card--desContainer {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+}
+
+#work__card--des--reverse {
+  align-items: start;
+}
+
+.work__card--line {
+  width: 100%;
+  background-color: rgb(159, 159, 159);
+  width: 100%;
+  height: 0.1px;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.work__card__desCon {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.work__card__des {
+  text-align: end;
+}
+
+#work__card--des--text--reverse {
+  text-align: start;
+}
+
+.work__card__desCon--footer {
+  width: 100%;
+  padding: 10px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.work__card__button {
+  text-decoration: none;
+  font-size: 2rem;
+  margin-top: 30px;
+  color: white;
+  background-color: var(--blue);
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+/* .work__testimonial {
+  width: 60%;
+} */

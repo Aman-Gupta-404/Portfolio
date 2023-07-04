@@ -1,0 +1,262 @@
+.contact {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #1c1d20;
+}
+
+.contact__section {
+  width: 100%;
+  padding: 30px var(--pagePadding);
+}
+
+.contact__heading {
+  margin-left: 16%;
+  width: max-content;
+  position: relative;
+}
+/* .contact__heading::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primaryOne);
+} */
+
+.contact__subHeading {
+  margin-left: 45%;
+  color: var(--blue);
+  position: relative;
+}
+
+.contact__subHeading::after {
+  content: "";
+  height: 2px;
+  width: 30%;
+  position: absolute;
+  background-color: var(--blue);
+  left: 0;
+  top: 50%;
+  transform: translate(-107%, 50%);
+}
+
+.contact__SubSection {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 60px;
+  justify-content: space-between;
+}
+
+.contact__left {
+  width: 65%;
+  padding-left: 20px;
+}
+
+.contact__left--form {
+  width: 100%;
+  /* margin-top: 40px; */
+}
+
+.contact__left--form--row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 20px;
+  border-top: 0.5px solid rgb(101, 101, 101);
+  padding: 30px 0px;
+}
+
+.contact__left__form__number {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.contact__left__form__question {
+  width: 95%;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.contact__form--label {
+  transition: all 0.1s ease-in-out;
+}
+
+.contact__input--single {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: var(--offblack);
+  padding: 20px 0px;
+  font-size: 2.8rem;
+  background-color: transparent;
+}
+
+.contact__input--multi {
+  width: 100%;
+  height: 350px;
+  border: none;
+  outline: none;
+  color: var(--offblack);
+  padding: 20px 0px;
+  font-size: 2.8rem;
+  background-color: transparent;
+  resize: none;
+  /* border: 1px solid white; */
+}
+
+#contact__input__dull {
+  color: white;
+}
+
+.contact__br {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  /* height: 1px;
+  display: block;
+  background-color: rgb(101, 101, 101);
+  border: none; */
+}
+
+.contact__br--line {
+  width: 65%;
+  height: 1px;
+  display: block;
+  background-color: rgb(101, 101, 101);
+  border: none;
+}
+
+.contact__submit--btn {
+  width: 30%;
+  padding: 20px 10px;
+  background-color: transparent;
+  border: 0.5px solid var(--blue);
+  border-radius: 30px;
+  color: var(--blue);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact__submit--btn:hover {
+  background-color: var(--blue);
+  transform: scale(1.15);
+  color: white;
+  opacity: 0.6;
+}
+
+/* right section of the page */
+.contact__right {
+  width: 30%;
+  margin-top: -10px;
+  /* border-top: 1px solid grey; */
+}
+
+.contact__right--text {
+  width: 80%;
+  margin-bottom: 0px;
+}
+
+.contact__right--heading {
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+/* link animation  */
+.contact__link {
+  text-decoration: none;
+  width: max-content;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    var(--blue),
+    var(--blue) 50%,
+    #fff 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact__link:before {
+  content: "";
+  background: var(--blue);
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact__link:hover {
+  background-position: 0;
+}
+
+.contact__link:hover::before {
+  width: 100%;
+}
+
+.contact__socials--section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* modal */
+.contact_modal--container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.contact__modal {
+  position: fixed;
+  max-width: 400px;
+  height: 150px;
+  background-color: #fff;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 7;
+}
+
+.contact__modal--btn {
+  font-size: 1.8rem;
+  color: white;
+  background-color: var(--primaryOne);
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  opacity: 0.8;
+  margin-top: 20px;
+  cursor: pointer;
+}

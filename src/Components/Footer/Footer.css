@@ -1,0 +1,30 @@
+.footer {
+  max-width: 100vw;
+  height: 100px;
+  background-color: #1c1d20;
+  padding: 20px var(--pagePadding);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.footer__left {
+  width: 50%;
+}
+
+.footer__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.footer__heading {
+  margin-bottom: 10px;
+}
+
+.footer__links {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}

@@ -1,0 +1,145 @@
+:root {
+  --black: #26272a;
+  --offblack: #4d4d4d;
+  --primaryOne: #e0005c;
+  --blue: rgb(97, 131, 228);
+  --pagePadding: 100px;
+  --navHeight: 100px;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* hide scrollbar for chrome, safari and opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+/* hide scrollbar for firefox */
+html {
+  scrollbar-width: none;
+}
+/* hide scrollbar for edge and IR */
+body {
+  -ms-overflow-style: none;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: rgba(97, 131, 228, 1) 0%;
+}
+
+::selection {
+  color: white;
+  background: rgba(97, 131, 228, 1) 0%;
+}
+
+#stopScroll {
+  overflow: hidden;
+}
+
+.font_pop {
+  font-family: "Poppins", sans-serif;
+}
+
+/* general font color */
+.font_black {
+  font-size: var(--black);
+}
+
+.font_offblack {
+  color: var(--offblack);
+}
+
+.primaryOne {
+  color: var(--primaryOne);
+}
+
+.font_white {
+  color: white;
+}
+
+.font_offwhite {
+  color: rgb(175, 175, 175);
+}
+
+.font_blue {
+  color: var(--blue);
+}
+
+/* font sizes */
+.font_14 {
+  font-size: 1.4rem;
+}
+
+.font_16 {
+  font-size: 1.6rem;
+}
+
+.font_18 {
+  font-size: 1.8rem;
+}
+
+.font_20 {
+  font-size: 2rem;
+}
+
+.font_22 {
+  font-size: 2.2rem;
+}
+
+.font_24 {
+  font-size: 2.4rem;
+}
+
+.font_28 {
+  font-size: 2.8rem;
+}
+
+.font_32 {
+  font-size: 3.2rem;
+}
+
+.font_38 {
+  font-size: 3.8rem;
+}
+
+.font_42 {
+  font-size: 4.2rem;
+}
+
+.font_50 {
+  font-size: 5rem;
+}
+
+.font_55 {
+  font-size: 5.5rem;
+}
+
+.font_60 {
+  font-size: 6rem;
+}
+.font_64 {
+  font-size: 6.4rem;
+}
+.font_70 {
+  font-size: 7rem;
+}
+
+/* font weights and styles */
+.font_bold {
+  font-weight: bold;
+}
+
+.font_light {
+  font-weight: 400;
+}
+
+.letter_space__hero {
+  letter-spacing: 3px;
+}
