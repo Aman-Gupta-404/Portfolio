@@ -86,7 +86,9 @@ function Work() {
             </p>
           </div>
           {/* <div className="work__card__desCon--footer"> */}
-          <Link className="work__card__button">Visit</Link>
+          <Link to={link} target="_blank" className="work__card__button">
+            Visit
+          </Link>
           {/* </div> */}
         </div>
       </div>
@@ -124,7 +126,7 @@ function Work() {
             pransiv,
             "Pransiv Concret Pvt. Ltd.",
             work1,
-            "link",
+            "http://www.pransivconcret.co.in/",
             false,
             "Design and Development"
           )}
@@ -132,7 +134,7 @@ function Work() {
             laviour,
             "Laviour Pvt. Ltd.",
             work2,
-            "link",
+            "https://www.laviour.com/",
             true,
             "Updates and management"
           )}

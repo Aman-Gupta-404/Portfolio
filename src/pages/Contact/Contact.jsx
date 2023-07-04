@@ -284,7 +284,7 @@ function Contact() {
               Contact Details
             </p>
             <Link
-              to="mailto:someone@example.com"
+              to="mailto:ag9139563@gmail.com"
               className="contact__link font_20 font_white"
             >
               ag9139563@gmail.com
