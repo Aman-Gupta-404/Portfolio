@@ -2,6 +2,14 @@ import React from "react";
 import "./Hero.css";
 import { motion } from "framer-motion";
 
+const renderTags = () => {
+  return (
+    <div className="tags__container">
+      <div className="hero_tag"></div>
+    </div>
+  );
+};
+
 function Hero() {
   return (
     <div className="hero">
@@ -13,7 +21,7 @@ function Hero() {
           I'm a web developer!
         </p>
         <p className="hero__left--subText font_20 font_offwhite">
-          I am a a Designer and a FullStack Developer from India
+          I do web design and fullstack web development
         </p>
         {/* <button className="hero__left--button">
 

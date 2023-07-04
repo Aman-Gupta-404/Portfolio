@@ -8,12 +8,14 @@ import { AnimatePresence, motion, useScroll } from "framer-motion";
 import Footer from "../../Components/Footer/Footer";
 import { BiLinkExternal } from "react-icons/bi";
 import Projects from "../../Components/ProjectsDone/Projects";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GrLinkNext } from "react-icons/gr";
 import pransiv from "../../assets/pransiv.png";
 import laviour from "../../assets/laviour.png";
 import Testimonial from "../../Components/Testimonial/Testimonial";
 import TransitionLoder from "../../Components/TransitionLoder/TransitionLoder";
+import { setTransitionTrue } from "../../redux/features/animationSlice";
+import { useDispatch } from "react-redux";
 
 const work1 =
   "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application build on React.js";
@@ -21,7 +23,9 @@ const work2 =
   "A fullstack Ecommerce application to help small clothing business. Even though I did not work on this project from the start, I made a lot of changes and added features on the front end as well as the backend";
 
 function Home({ loadValue }) {
-  // console.log("load value is: ", loadValue);
+  console.log("load value is: ", loadValue);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const scrollRef = useRef(null);
   const [showPreLoader, setShowPreLoader] = useState(true);
   const [showCustomCursor, setShowCustomCursor] = useState(false);
@@ -108,8 +112,7 @@ function Home({ loadValue }) {
               className="work__card__des font_black font_20"
               id={`${reverse ? "work__card--des--text--reverse" : null}`}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. In sequi
-              voluptatum quisquam dolore aliquam.
+              {des}
             </p>
           </div>
           {/* <div className="work__card__desCon--footer"> */}
@@ -157,9 +160,14 @@ function Home({ loadValue }) {
                 </div>
               </div>
               <div className="homePage__about--action">
-                <button className="homePage__about--action--btn">
-                  Know more
-                </button>
+                <Link
+                  to="/about"
+                  onClick={() => dispatch(setTransitionTrue("About"))}
+                >
+                  <button className="homePage__about--action--btn">
+                    Know more
+                  </button>
+                </Link>
               </div>
               {/* <p className="homePage__about--text font_32">
           Helping businesses build their online presence.
@@ -279,7 +287,17 @@ function Home({ loadValue }) {
               </p>
               <div className="homePage__contact--action">
                 <hr className="homePage__about--line" />
-                <button className="homePage__btn">Contact me</button>
+                <Link
+                  to="/contact"
+                  onClick={() => dispatch(setTransitionTrue("contact"))}
+                >
+                  <button
+                    className="homePage__btn"
+                    // onClick={() => navigate("/contact")}
+                  >
+                    Contact me
+                  </button>
+                </Link>
               </div>
             </div>
             {/* footer */}

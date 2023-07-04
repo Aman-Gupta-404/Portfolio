@@ -7,12 +7,15 @@ import laviour from "../../assets/laviour.png";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import Testimonial from "../../Components/Testimonial/Testimonial";
+import { useDispatch } from "react-redux";
+import { setTransitionTrue } from "../../redux/features/animationSlice";
 
 const work1 =
   "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application build on React.js";
 const work2 =
   "A fullstack Ecommerce application to help small clothing business. Even though I did not work on this project from the start, I made a lot of changes and added features on the front end as well as the backend";
 function Work() {
+  const dispatch = useDispatch();
   const [showCustomCursor, setShowCustomCursor] = useState(false);
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -152,7 +155,12 @@ function Work() {
         </p>
         <div className="homePage__contact--action">
           <hr className="homePage__about--line" />
-          <button className="homePage__btn">Contact me</button>
+          <Link
+            to="/contact"
+            onClick={() => dispatch(setTransitionTrue("contact"))}
+          >
+            <button className="homePage__btn">Contact me</button>
+          </Link>
         </div>
       </div>
 

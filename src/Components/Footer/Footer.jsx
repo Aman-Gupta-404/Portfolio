@@ -14,9 +14,21 @@ function Footer() {
       <div className="footer__right">
         <p className="footer__heading font_16 font_offblack">Socials</p>
         <p className="footer__subheading--right font_16 font_offblack">
-          <Link className="footer__links">Linkedin</Link>
-          <Link className="footer__links">Instagram</Link>
-          <Link className="footer__links">Github</Link>
+          <Link
+            to="https://linkedin.com/in/amangupta3"
+            target="_blank"
+            className="footer__links"
+          >
+            Linkedin
+          </Link>
+          {/* <Link className="footer__links">Instagram</Link> */}
+          <Link
+            to="https://github.com/Aman-Gupta-404"
+            target="_blank"
+            className="footer__links"
+          >
+            Github
+          </Link>
         </p>
       </div>
     </div>

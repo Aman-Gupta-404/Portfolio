@@ -8,8 +8,13 @@ import image from "../../assets/about.jpg";
 import { FaLaptopCode, FaDatabase } from "react-icons/fa";
 import { FaGears } from "react-icons/fa6";
 import Footer from "../../Components/Footer/Footer";
+import { useDispatch } from "react-redux";
+import { setTransitionTrue } from "../../redux/features/animationSlice";
+import { Link } from "react-router-dom";
 
 function About() {
+  const dispatch = useDispatch();
+
   const pageTransitionVariant = {
     pageInitial: {
       y: "100vh",
@@ -210,7 +215,12 @@ function About() {
         </p>
         <div className="homePage__contact--action">
           <hr className="homePage__about--line" />
-          <button className="homePage__btn">Contact me</button>
+          <Link
+            to="/contact"
+            onClick={() => dispatch(setTransitionTrue("contact"))}
+          >
+            <button className="homePage__btn">Contact me</button>
+          </Link>
         </div>
       </div>
       <Footer />

@@ -17,6 +17,7 @@ import { AnimatePresence } from "framer-motion";
 import About from "./pages/About/About";
 import Work from "./pages/Work/Work";
 import { useLocation } from "react-router-dom";
+import Modal from "./Components/Modal/Modal";
 
 function App() {
   let location = useLocation();
@@ -26,6 +27,8 @@ function App() {
   const pageTransitionDisplayValue = useSelector(
     (state) => state.animationState.pageValue
   );
+  const modalDisplay = useSelector((state) => state.modalState);
+
   const dispatch = useDispatch();
   const [showBurger, setShowBurger] = useState(false);
   const [pageTransitionValue, setPageTransitionValue] = useState(false);
@@ -47,7 +50,7 @@ function App() {
     // console.log(position);
     if (position > 100) {
       setShowBurger(true);
-      console.log("shit be true bro");
+      // console.log("shit be true bro");
     } else {
       setShowBurger(false);
     }
@@ -108,6 +111,8 @@ function App() {
 
   return (
     <>
+      {/* {true ? renderModal() : null} */}
+      {modalDisplay.show ? <Modal message={modalDisplay.message} /> : null}
       <AnimatePresence>
         {pageTransitionDisplayValue ? (
           <TransitionLoder value={pageTransitionDisplayValue} />

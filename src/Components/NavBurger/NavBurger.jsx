@@ -236,10 +236,18 @@ function NavBurger({ stopScroll, enableScroll }) {
             <p className="navSection__footer--heading font_14 font_offwhite">
               SOCIALS
             </p>
-            <Link className="navSection__footer--link font_white font_18">
-              Instagram
+            <Link
+              to={"https://linkedin.com/in/amangupta3"}
+              target="_blank"
+              className="navSection__footer--link font_white font_18"
+            >
+              Linkedin
             </Link>
-            <Link className="navSection__footer--link font_white font_18">
+            <Link
+              to={"https://github.com/Aman-Gupta-404"}
+              target="_blank"
+              className="navSection__footer--link font_white font_18"
+            >
               Github
             </Link>
           </div>

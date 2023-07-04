@@ -5,8 +5,11 @@ import Footer from "../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { useDispatch } from "react-redux";
+import { showModal } from "../../redux/features/modalSlics";
 
 function Contact() {
+  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [organizationName, setOrganizationName] = useState("");
@@ -55,26 +58,26 @@ function Contact() {
 
   const renderModal = () => {
     return (
-      // <motion.div className="contact_modal--container">
-      <motion.div
-        className="contact__modal"
-        variants={modalVariant}
-        initial="hidden"
-        animate="visible"
-      >
-        <div className="contact__modal_text">
-          <p className="font_20 font_black">
-            Your message was sent successfully!
-          </p>
-        </div>
-        <button
-          className="contact__modal--btn"
-          onClick={() => setUseModal(false)}
+      <motion.div className="contact_modal--container">
+        <div
+          className="contact__modal"
+          // variants={modalVariant}
+          // initial="hidden"
+          // animate="visible"
         >
-          Okay
-        </button>
+          <div className="contact__modal_text">
+            <p className="font_20 font_black">
+              Your message was sent successfully!
+            </p>
+          </div>
+          <button
+            className="contact__modal--btn"
+            onClick={() => setUseModal(false)}
+          >
+            Okay
+          </button>
+        </div>
       </motion.div>
-      // </motion.div>
     );
   };
 
@@ -94,8 +97,9 @@ function Contact() {
     if (flag) {
       // TODO: display error
       console.log("error boss");
-      setModalMessage("Please fill all the fields!");
-      setUseModal(true);
+      dispatch(showModal("Please fill all the fields"));
+      // setModalMessage("Please fill all the fields!");
+      // setUseModal(true);
     } else {
       const _data = {
         name: name,
@@ -111,14 +115,19 @@ function Contact() {
           clearInputs(); //clear the inputs
           console.log("success!");
           // TODO: the popup messages
-
-          setModalMessage("Please fill all the fields!");
-          setUseModal(true);
+          dispatch(
+            showModal(
+              "Thankyou, you'r message was sent. I will get back to you"
+            )
+          );
+          // setModalMessage("Please fill all the fields!");
+          // setUseModal(true);
         })
         .catch((err) => {
           console.log(err);
-          setModalMessage("Some error occured, please drop me a mail");
-          setUseModal(true);
+          dispatch(showModal("Some error occured, please drop me a mail"));
+          // setModalMessage("Some error occured, please drop me a mail");
+          // setUseModal(true);
         });
     }
   };
@@ -134,7 +143,7 @@ function Contact() {
       exit="pageExit"
     >
       <Navbar textColorBlack={false} />
-      {useModal ? renderModal() : null}
+      {/* {useModal ? renderModal() : null} */}
       <div className="contact__section">
         <div className="contact__section--header">
           <p className="contact__heading font_60 font_white">Have a project?</p>
@@ -286,10 +295,18 @@ function Contact() {
               Socials
             </p>
             <div className="contact__socials--section">
-              <Link to="#" className="contact__link font_20 font_white">
+              <Link
+                to="https://linkedin.com/in/amangupta3"
+                target="_blank"
+                className="contact__link font_20 font_white"
+              >
                 LinkedIn
               </Link>
-              <Link to="#" className="contact__link font_20 font_white">
+              <Link
+                to="https://github.com/Aman-Gupta-404"
+                target="_blank"
+                className="contact__link font_20 font_white"
+              >
                 Github
               </Link>
             </div>
