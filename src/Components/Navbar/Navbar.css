@@ -143,3 +143,10 @@
   right: 20px;
   top: 20px;
 }
+
+/* @media only screen and (min-width: 2600px) {
+  :root {
+    font-size: 100%;
+    --pagePadding: 300px;
+  }
+} */

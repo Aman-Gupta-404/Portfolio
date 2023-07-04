@@ -3,7 +3,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import { motion } from "framer-motion";
 import PictureAnimation from "../../Components/PictureAnimation/PictureAnimation";
 import "./About.css";
-import image from "../../assets/about.jpg";
+import image from "../../assets/about2.jpg";
 // icons
 import { FaLaptopCode, FaDatabase } from "react-icons/fa";
 import { FaGears } from "react-icons/fa6";

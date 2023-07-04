@@ -13,6 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
 }
 
 /* hide scrollbar for chrome, safari and opera */
@@ -142,4 +143,61 @@ body {
 
 .letter_space__hero {
   letter-spacing: 3px;
+}
+
+/* for bigger size screens */
+@media only screen and (max-width: 1000px) {
+  :root {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    font-size: 58%;
+    --pagePadding: 65px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 50%;
+    --pagePadding: 40px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  :root {
+    font-size: 48%;
+    --pagePadding: 40px;
+  }
+}
+
+/* for biggeer screen */
+@media only screen and (min-width: 1540px) {
+  :root {
+    font-size: 90%;
+    --pagePadding: 150px;
+  }
+}
+
+@media only screen and (min-width: 2100px) {
+  :root {
+    font-size: 95%;
+    --pagePadding: 220px;
+  }
+}
+
+@media only screen and (min-width: 2600px) {
+  :root {
+    font-size: 100%;
+    --pagePadding: 300px;
+  }
+}
+
+@media only screen and (min-width: 2600px) {
+  :root {
+    font-size: 110%;
+    --pagePadding: 300px;
+  }
 }

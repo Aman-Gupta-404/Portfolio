@@ -48,14 +48,14 @@ function Navbar({ textColorBlack }) {
       <div className="navbar__left">
         <p className="font_20 font_bold font_black">
           <Link
-            className={`navbar__left--logo ${
+            className={`navbar__left--logo font_20 ${
               textColorBlack ? "navTextBlack" : "navTextWhite"
             }`}
             // onClick={setAnimationState}
             to="/"
           >
-            <span className="navbar__logo--span">{"<"}</span>Aman{" /"}
-            <span className="navbar__logo--span">{">"}</span>
+            <span className="navbar__logo--span font_20">{"<"}</span>Aman{" /"}
+            <span className="navbar__logo--span font_20">{">"}</span>
           </Link>
         </p>
       </div>

@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { useDispatch } from "react-redux";
 import { showModal } from "../../redux/features/modalSlics";
+import { FaLeaf } from "react-icons/fa";
 
 function Contact() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function Contact() {
 
   const [useModal, setUseModal] = useState(true);
   const [modalMessage, setModalMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() =>
     //
@@ -89,46 +91,58 @@ function Contact() {
   };
 
   const handleOnSubmit = () => {
-    const flag =
-      name.length === 0 ||
-      email.length === 0 ||
-      organizationName.length === 0 ||
-      message.length === 0;
-    if (flag) {
-      // TODO: display error
-      console.log("error boss");
-      dispatch(showModal("Please fill all the fields"));
-      // setModalMessage("Please fill all the fields!");
-      // setUseModal(true);
+    if (loading) {
+      return;
     } else {
-      const _data = {
-        name: name,
-        email: email,
-        organizationName: organizationName,
-        message: message,
-      };
+      setLoading(true);
 
-      // send message
-      emailjs
-        .send("service_igkrbwu", "template_1ssjewl", _data, "KpXi-QiHIztwKIVCQ")
-        .then((res) => {
-          clearInputs(); //clear the inputs
-          console.log("success!");
-          // TODO: the popup messages
-          dispatch(
-            showModal(
-              "Thankyou, you'r message was sent. I will get back to you"
-            )
-          );
-          // setModalMessage("Please fill all the fields!");
-          // setUseModal(true);
-        })
-        .catch((err) => {
-          console.log(err);
-          dispatch(showModal("Some error occured, please drop me a mail"));
-          // setModalMessage("Some error occured, please drop me a mail");
-          // setUseModal(true);
-        });
+      const flag =
+        name.length === 0 ||
+        email.length === 0 ||
+        organizationName.length === 0 ||
+        message.length === 0;
+      if (flag) {
+        // TODO: display error
+        // console.log("error boss");
+        setLoading(false);
+        dispatch(showModal("Please fill all the fields"));
+      } else {
+        const _data = {
+          name: name,
+          email: email,
+          organizationName: organizationName,
+          message: message,
+        };
+
+        // send message
+        emailjs
+          .send(
+            "service_igkrbwu",
+            "template_1ssjewl",
+            _data,
+            "KpXi-QiHIztwKIVCQ"
+          )
+          .then((res) => {
+            clearInputs(); //clear the inputs
+            // console.log("success!");
+            // TODO: the popup messages
+            setLoading(false);
+            dispatch(
+              showModal(
+                "Thankyou, you'r message was sent. I will get back to you"
+              )
+            );
+            // setModalMessage("Please fill all the fields!");
+            // setUseModal(true);
+          })
+          .catch((err) => {
+            // console.log(err);
+            setLoading(false);
+            dispatch(showModal("Some error occured, please drop me a mail"));
+            // setModalMessage("Some error occured, please drop me a mail");
+            // setUseModal(true);
+          });
+      }
     }
   };
 
@@ -270,7 +284,7 @@ function Contact() {
                   className="contact__submit--btn font_24"
                   onClick={handleOnSubmit}
                 >
-                  Submit
+                  {loading ? "loading" : "submit"}
                 </button>
               </div>
             </div>

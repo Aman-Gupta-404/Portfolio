@@ -17,7 +17,7 @@ function Footer() {
           <Link
             to="https://linkedin.com/in/amangupta3"
             target="_blank"
-            className="footer__links"
+            className="footer__links font_16"
           >
             Linkedin
           </Link>
@@ -25,7 +25,7 @@ function Footer() {
           <Link
             to="https://github.com/Aman-Gupta-404"
             target="_blank"
-            className="footer__links"
+            className="footer__links font_16"
           >
             Github
           </Link>

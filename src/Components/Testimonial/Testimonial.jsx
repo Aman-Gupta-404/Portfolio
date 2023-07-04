@@ -18,7 +18,7 @@ const testimonials = [
   },
   {
     name: "Pranshu Chokhani",
-    position: "CEO, Pransiv Concret Pvt. Ltd.",
+    position: "Director, Pransiv Concret Pvt. Ltd.",
     message:
       "Had a great experience working with Aman. He is a great listner and gives amazing suggestions for the business. Would devinitely love to work with him again.",
     image: avatar,

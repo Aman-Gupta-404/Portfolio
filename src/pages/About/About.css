@@ -60,7 +60,7 @@
   height: 100%;
   position: absolute;
   object-fit: cover;
-  object-position: 0px -200px;
+  object-position: 0px 00px;
   border-radius: 5px;
 }
 
