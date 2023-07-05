@@ -305,7 +305,7 @@ function Contact() {
             </Link>
 
             {/* social */}
-            <p className="contact__right--heading font_offblack font_18">
+            <p className="contact__right--heading2 font_offblack font_18">
               Socials
             </p>
             <div className="contact__socials--section">
