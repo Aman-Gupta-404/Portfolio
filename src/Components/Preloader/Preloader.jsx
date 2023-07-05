@@ -71,6 +71,11 @@ function Preloader({ hideLoader }) {
   }, []);
 
   const preloaderClose = {
+    initial: {
+      height: "100vh",
+      width: "100vw",
+      bottom: 0,
+    },
     close: {
       height: 0,
       transition: {
@@ -206,7 +211,8 @@ function Preloader({ hideLoader }) {
   return (
     <motion.div
       variants={preloaderClose}
-      // animate="show"
+      initial="initial"
+      animate="show"
       exit="close"
       key="preloader__container"
       className="preloader"

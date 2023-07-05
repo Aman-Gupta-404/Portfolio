@@ -2,24 +2,32 @@ import React, { useState, useEffect } from "react";
 import "./NavBurger.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { hideNav, showNav } from "../../redux/features/navigationSlice";
 
 function NavBurger({ stopScroll, enableScroll }) {
   const dispatch = useDispatch();
+  const navStat = useSelector((state) => state.navigationState.navDisplay);
   const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
-    if (navOpen) {
+    console.log("the height is: ", window.innerHeight);
+    if (navStat) {
       console.log("checking nav otpion to true");
       stopScroll();
     } else {
       enableScroll();
     }
-  }, [navOpen]);
+  }, [navOpen, navStat]);
 
   const onButtonCLick = () => {
     console.log("clicked");
     setNavOpen(!navOpen);
+    if (navStat) {
+      dispatch(hideNav());
+    } else {
+      dispatch(showNav());
+    }
   };
 
   const navSectionVariant = {
@@ -57,43 +65,9 @@ function NavBurger({ stopScroll, enableScroll }) {
     dispatch(setTransitionTrue(e.target.id));
   };
 
-  return (
-    <>
-      {/* the burger icon */}
-      <motion.button
-        onClick={onButtonCLick}
-        className="navBurger"
-        id={`${navOpen ? "navBurger--open" : null}`}
-        initial={{
-          opacity: 0,
-          scale: 0,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          // backgroundColor: "#1c1d20",
-        }}
-        // whileHover={{
-        //   backgroundColor: "rgb(97, 131, 228)",
-        //   transition: {
-        //     type: "spring",
-        //     bounce: 0,
-        //     duration: 0.3,
-        //   },
-        // }}
-      >
-        <div
-          className="divBurger--line"
-          id={`${navOpen ? "burgerline--cross--top" : null}`}
-        ></div>
-        <div
-          className="divBurger--line"
-          id={`${navOpen ? "burgerline--cross--bottom" : null}`}
-        ></div>
-      </motion.button>
-
-      {/* the nav section */}
-      <div className="navSection" id={`${navOpen ? "navSection--open" : null}`}>
+  const sectiom = () => {
+    return (
+      <div className="navSection" id={`${navStat ? "navSection--open" : null}`}>
         <div className="navSection__black">
           <p className="navSection--heading font_16 font_offblack">
             NAVIGATION
@@ -101,7 +75,7 @@ function NavBurger({ stopScroll, enableScroll }) {
           <hr className="navSection__br" />
           <div className="navSection__links">
             <AnimatePresence>
-              {navOpen ? (
+              {navStat ? (
                 <Link
                   to="/"
                   className="navSection__link font_50 font_white"
@@ -134,7 +108,7 @@ function NavBurger({ stopScroll, enableScroll }) {
             </AnimatePresence>
 
             <AnimatePresence>
-              {navOpen ? (
+              {navStat ? (
                 <Link
                   to="/work"
                   className="navSection__link font_50 font_white"
@@ -166,7 +140,7 @@ function NavBurger({ stopScroll, enableScroll }) {
               ) : null}
             </AnimatePresence>
             <AnimatePresence>
-              {navOpen ? (
+              {navStat ? (
                 <Link
                   to="/work"
                   className="navSection__link font_50 font_white"
@@ -198,7 +172,7 @@ function NavBurger({ stopScroll, enableScroll }) {
               ) : null}
             </AnimatePresence>
             <AnimatePresence>
-              {navOpen ? (
+              {navStat ? (
                 <Link
                   to="/contact"
                   className="navSection__link font_50 font_white"
@@ -253,6 +227,45 @@ function NavBurger({ stopScroll, enableScroll }) {
           </div>
         </div>
       </div>
+    );
+  };
+
+  return (
+    <>
+      {/* the burger icon */}
+      <motion.button
+        onClick={onButtonCLick}
+        className="navBurger"
+        id={`${navStat ? "navBurger--open" : null}`}
+        initial={{
+          opacity: 0,
+          scale: 0,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          // backgroundColor: "#1c1d20",
+        }}
+        // whileHover={{
+        //   backgroundColor: "rgb(97, 131, 228)",
+        //   transition: {
+        //     type: "spring",
+        //     bounce: 0,
+        //     duration: 0.3,
+        //   },
+        // }}
+      >
+        <div
+          className="divBurger--line"
+          id={`${navStat ? "burgerline--cross--top" : null}`}
+        ></div>
+        <div
+          className="divBurger--line"
+          id={`${navStat ? "burgerline--cross--bottom" : null}`}
+        ></div>
+      </motion.button>
+
+      {/* the nav section */}
     </>
   );
 }

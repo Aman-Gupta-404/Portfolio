@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setTransitionTrue } from "../../redux/features/animationSlice";
 import { useLocation } from "react-router-dom";
+import { showNav } from "../../redux/features/navigationSlice";
 
 function Navbar({ textColorBlack }) {
   let location = useLocation();
@@ -144,7 +145,9 @@ function Navbar({ textColorBlack }) {
               } `}
               // to="/contact"
               id="navSmallMenu"
-              // onClick={setAnimationState}
+              onClick={() => {
+                dispatch(showNav());
+              }}
             >
               Menu
             </Link>

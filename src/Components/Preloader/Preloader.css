@@ -1,6 +1,6 @@
 .preloader {
-  max-width: 100vw;
-  max-height: 100vw;
+  width: 100vw;
+  height: 100vw;
   background-color: black;
   padding: 30px var(--pagePadding) 30px var(--pagePadding);
   display: flex;

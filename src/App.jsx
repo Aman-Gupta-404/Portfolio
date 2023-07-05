@@ -18,6 +18,7 @@ import About from "./pages/About/About";
 import Work from "./pages/Work/Work";
 import { useLocation } from "react-router-dom";
 import Modal from "./Components/Modal/Modal";
+import NavSection from "./Components/NavSmallSection/NavSection";
 
 function App() {
   let location = useLocation();
@@ -28,6 +29,9 @@ function App() {
     (state) => state.animationState.pageValue
   );
   const modalDisplay = useSelector((state) => state.modalState);
+  const navSectionState = useSelector(
+    (state) => state.navigationState.navDisplay
+  );
 
   const dispatch = useDispatch();
   const [showBurger, setShowBurger] = useState(false);
@@ -119,10 +123,11 @@ function App() {
         ) : null}
       </AnimatePresence>
       <AnimatePresence>
-        {showBurger ? (
+        {showBurger || navSectionState ? (
           <NavBurger stopScroll={stopScroll} enableScroll={enableScroll} />
         ) : null}
       </AnimatePresence>
+      {navSectionState ? <NavSection /> : null}
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home loadValue={initialLoadValue} />} />
