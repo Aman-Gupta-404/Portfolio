@@ -176,3 +176,21 @@
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .work__card--imageContainer {
+    width: 70%;
+  }
+  .work__card--desContainer {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .work__card--imageContainer {
+    width: 95%;
+  }
+  .work__card--desContainer {
+    width: 90%;
+  }
+}

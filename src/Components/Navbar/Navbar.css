@@ -50,6 +50,13 @@
   list-style: none;
 }
 
+.navbar__right--item-resp {
+  padding: 0px 10px;
+  text-decoration: none;
+  list-style: none;
+  display: none;
+}
+
 /* Nav white text */
 .navbar__right--item--link--white {
   color: rgb(212, 212, 212);
@@ -144,9 +151,14 @@
   top: 20px;
 }
 
-/* @media only screen and (min-width: 2600px) {
-  :root {
-    font-size: 100%;
-    --pagePadding: 300px;
+@media only screen and (max-width: 550px) {
+  .navbar__right--item {
+    display: none;
   }
-} */
+  #navSmallMenu {
+    display: block;
+  }
+  .navbar__right--item-resp {
+    display: block;
+  }
+}

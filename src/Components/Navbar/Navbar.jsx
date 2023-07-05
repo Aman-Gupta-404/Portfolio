@@ -126,6 +126,29 @@ function Navbar({ textColorBlack }) {
               Contact
             </Link>
           </li>
+
+          {/* small screen display option */}
+          <li className="navbar__right--item-resp">
+            <Link
+              className={`${
+                textColorBlack
+                  ? "navbar__right--item--link--black"
+                  : "navbar__right--item--link--white"
+              } font_18 
+              ${
+                navState === "contact"
+                  ? textColorBlack
+                    ? "nav__linkActive--black"
+                    : "nav__linkActive--white"
+                  : ""
+              } `}
+              // to="/contact"
+              id="navSmallMenu"
+              // onClick={setAnimationState}
+            >
+              Menu
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

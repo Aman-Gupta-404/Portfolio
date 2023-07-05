@@ -190,7 +190,7 @@
   width: 100%;
   text-align: start;
   padding-left: 20px;
-  padding-right: 40%;
+  padding-right: 10%;
   font-size: 8rem;
   margin-bottom: 10px;
 }
@@ -375,10 +375,74 @@
   .work__card {
     width: 90%;
   }
+  .homePage__contact {
+    height: 80vh;
+    padding-top: 50px;
+  }
+  .homePage__btn {
+    width: 170px;
+    height: 170px;
+  }
 }
 
 @media only screen and (max-width: 9500px) {
   .work__card {
     width: 95%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .work__card {
+    width: 95%;
+  }
+  .homePage__contact--heading {
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 6rem;
+  }
+  .homePage__contact--text {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+  .homePage__contact--action {
+    margin-top: 120px;
+  }
+  .homePage__btn {
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+/* bigger screens */
+@media only screen and (min-width: 1500px) {
+  .homePage__btn {
+    width: 300px;
+    height: 300px;
+  }
+  .homePage__contact {
+    height: 70vh;
+  }
+}
+
+/* smaller screens */
+
+@media only screen and (max-width: 800px) {
+  .work__card--imageContainer {
+    width: 70%;
+  }
+  .work__card--desContainer {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .work__card--imageContainer {
+    width: 95%;
+  }
+  .work__card--desContainer {
+    width: 90%;
   }
 }
