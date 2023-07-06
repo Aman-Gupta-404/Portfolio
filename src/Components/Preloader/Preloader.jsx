@@ -161,7 +161,7 @@ function Preloader({ hideLoader }) {
             // initial="hidden"
             // animate="visible"
           >
-            Developemnt.
+            Development.
           </p>
         </motion.div>
       );

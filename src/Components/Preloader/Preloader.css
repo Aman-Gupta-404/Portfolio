@@ -34,3 +34,9 @@
   height: 50px; */
   margin: auto;
 }
+
+@media only screen and (max-width: 600px) {
+  .preloader__text {
+    font-size: 5rem;
+  }
+}
