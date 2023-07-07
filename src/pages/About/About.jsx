@@ -99,7 +99,7 @@ function About() {
                 </div>
                 <div className="about__services--description">
                   <p className="about__services--description--text font_16 font_black">
-                    I provide front end Development services, all the way from
+                    I provide front-end Development services, all the way from
                     designing the website to developing the the website which is
                     adaptable to all the devices and screens.
                   </p>
@@ -136,9 +136,9 @@ function About() {
                 </div>
                 <div className="about__services--description">
                   <p className="about__services--description--text font_16 font_black">
-                    I provide Backend Development services, where I build
-                    comples backends for your projects along with a data base,
-                    and create API's for your frontend to access it.
+                    I provide backend development services, where I build
+                    complex backend for the projects along with a data base, and
+                    create API's for the frontend to access it.
                   </p>
                 </div>
 
@@ -173,9 +173,9 @@ function About() {
                 </div>
                 <div className="about__services--description">
                   <p className="about__services--description--text font_16 font_black">
-                    I provide full stack development solution, all the way from
-                    creating the architecture of the website to having a fully
-                    functional website hoasted on the web.
+                    I provide full stack development solution, from creating the
+                    architecture of the website to having a fully functional
+                    website hosted on the web.
                   </p>
                 </div>
 
@@ -211,7 +211,7 @@ function About() {
         </p>
         <p className="homePage__contact--text font_20 font_offwhite">
           If you have come so far, you must have a project in mind. Let's talk
-          and i'll help you translate those amazing ideas to reality!
+          and I'll help you translate those amazing ideas to reality!
         </p>
         <div className="homePage__contact--action">
           <hr className="homePage__about--line" />

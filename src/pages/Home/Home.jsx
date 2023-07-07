@@ -148,16 +148,16 @@ function Home({ loadValue }) {
               <div className="homePage__about--section">
                 <div className="homePage__about--left">
                   <p className="homePage__about--left--text font_22 font_black">
-                    A tech and Business Enthuast is how I would define my self.
-                    I love exploring new technology and through my work I help
-                    my clients solve their problems using technology.
+                    I would define my self as a tech and Business Enthusiast. I
+                    I am a keen learner and through my work I help clients solve
+                    their problems using technology.
                   </p>
                 </div>
                 <div className="homePage__about--right">
                   <p className="homePage__about--left--text font_18 font_offblack">
-                    A combination of my passion and skill for technology and
-                    understanding of Business world allows me to provide great
-                    service to my clients.
+                    My passion, skills for technology and understanding of
+                    Business allows me to provide satisfactory services to my
+                    clients.
                   </p>
                 </div>
               </div>
@@ -285,7 +285,7 @@ function Home({ loadValue }) {
               </p>
               <p className="homePage__contact--text font_20 font_offwhite">
                 If you have come so far, you must have a project in mind. Let's
-                talk and i'll help you translate those amazing ideas to reality!
+                talk and I'll help you translate those amazing ideas to reality!
               </p>
               <div className="homePage__contact--action">
                 <hr className="homePage__about--line" />

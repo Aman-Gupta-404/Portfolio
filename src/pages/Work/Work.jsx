@@ -13,7 +13,7 @@ import { setTransitionTrue } from "../../redux/features/animationSlice";
 const work1 =
   "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application build on React.js";
 const work2 =
-  "A fullstack Ecommerce application to help small clothing business. Even though I did not work on this project from the start, I made a lot of changes and added features on the front end as well as the backend";
+  "A fullstack E-commerce application to help small clothing business.I didn't work on this project from the start yet I made a lot of changes and added features on the front end as well as the backend";
 function Work() {
   const dispatch = useDispatch();
   const [showCustomCursor, setShowCustomCursor] = useState(false);
@@ -108,12 +108,15 @@ function Work() {
         <p className="work__section--heading font_60 font_black">Work</p>
         <p className="work__section--subHeading font_18 font_offblack">
           Over the past one year I have helped clients with my{" "}
-          <span className="work__section--subHeading--span">design</span>,{" "}
-          <span className="work__section--subHeading--span">
+          <span className="work__section--subHeading--span font_18">
+            design
+          </span>
+          ,{" "}
+          <span className="work__section--subHeading--span font_18">
             frontend developemnt
           </span>{" "}
           and{" "}
-          <span className="work__section--subHeading--span">
+          <span className="work__section--subHeading--span font_18">
             backend developemnt
           </span>
           .
@@ -153,7 +156,7 @@ function Work() {
         </p>
         <p className="homePage__contact--text font_20 font_offwhite">
           If you have come so far, you must have a project in mind. Let's talk
-          and i'll help you translate those amazing ideas to reality!
+          and I'll help you translate those amazing ideas to reality!
         </p>
         <div className="homePage__contact--action">
           <hr className="homePage__about--line" />

@@ -13,7 +13,7 @@ const testimonials = [
     name: "Rachana T",
     position: "CEO, Laviour Pvt. Ltd.",
     message:
-      "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application build on React.js",
+      "A great experience. A good listener and it made our work easy as you were able to grasp everything. One thing I really appreciate is your willingness to try without hesitating and your patience. Extremely friendly and talented.",
     image: avatar,
   },
   {
