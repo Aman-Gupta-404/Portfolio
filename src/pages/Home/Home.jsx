@@ -39,7 +39,7 @@ function Home({ loadValue }) {
     if (loadValue) {
       setTimeout(() => {
         setShowPreLoader(false);
-      }, 3500);
+      }, 3350);
     } else {
       setTimeout(() => {
         setShowPreLoader(false);

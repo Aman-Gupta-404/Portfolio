@@ -62,7 +62,7 @@ function Preloader({ hideLoader }) {
             setDisplayState(3);
             setTimeout(() => {
               setDisplayState(4);
-            }, 800);
+            }, 700);
           }, 400);
         }, 800);
       }, 400);
