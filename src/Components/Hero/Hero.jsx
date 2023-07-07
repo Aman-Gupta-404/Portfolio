@@ -13,7 +13,7 @@ function Hero() {
           I'm a web developer!
         </p>
         <p className="hero__left--subText font_20 font_offwhite">
-          I do web design and fullstack web development
+          I do web designing and fullstack web development
         </p>
         {/* <button className="hero__left--button">
 

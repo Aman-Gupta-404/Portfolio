@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { setTransitionTrue } from "../../redux/features/animationSlice";
 
 const work1 =
-  "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application build on React.js";
+  "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application built on React.js";
 const work2 =
   "A fullstack E-commerce application to help small clothing business.I didn't work on this project from the start yet I made a lot of changes and added features on the front end as well as the backend";
 function Work() {

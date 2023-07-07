@@ -18,9 +18,9 @@ import { setTransitionTrue } from "../../redux/features/animationSlice";
 import { useDispatch } from "react-redux";
 
 const work1 =
-  "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application build on React.js";
+  "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application built on React.js";
 const work2 =
-  "A fullstack Ecommerce application to help small clothing business. Even though I did not work on this project from the start, I made a lot of changes and added features on the front end as well as the backend";
+  "A fullstack E-commerce application to help small clothing business.I didn't work on this project from the start yet I made a lot of changes and added features on the front end as well as the backend";
 
 function Home({ loadValue }) {
   console.log("load value is: ", loadValue);
@@ -148,14 +148,14 @@ function Home({ loadValue }) {
               <div className="homePage__about--section">
                 <div className="homePage__about--left">
                   <p className="homePage__about--left--text font_22 font_black">
-                    I would define my self as a tech and Business Enthusiast. I
-                    I am a keen learner and through my work I help clients solve
+                    I would define myself as a tech and Business Enthusiast. I
+                    am a keen learner and through my work, I help clients solve
                     their problems using technology.
                   </p>
                 </div>
                 <div className="homePage__about--right">
                   <p className="homePage__about--left--text font_18 font_offblack">
-                    My passion, skills for technology and understanding of
+                    My passion, skills for technology, and understanding of
                     Business allows me to provide satisfactory services to my
                     clients.
                   </p>

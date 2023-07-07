@@ -100,7 +100,7 @@ function About() {
                 <div className="about__services--description">
                   <p className="about__services--description--text font_16 font_black">
                     I provide front-end Development services, all the way from
-                    designing the website to developing the the website which is
+                    designing the website to developing the website which is
                     adaptable to all the devices and screens.
                   </p>
                 </div>
@@ -137,8 +137,8 @@ function About() {
                 <div className="about__services--description">
                   <p className="about__services--description--text font_16 font_black">
                     I provide backend development services, where I build
-                    complex backend for the projects along with a data base, and
-                    create API's for the frontend to access it.
+                    complex backends for the projects along with a database, and
+                    create APIs for the front end to access it.
                   </p>
                 </div>
 
