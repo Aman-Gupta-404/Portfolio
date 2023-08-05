@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import "./Work.css";
 import pransiv from "../../assets/pransiv.png";
 import laviour from "../../assets/laviour.png";
+import marotia from "../../assets/marotia.png";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import Testimonial from "../../Components/Testimonial/Testimonial";
@@ -14,6 +15,9 @@ const work1 =
   "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application built on React.js";
 const work2 =
   "A fullstack E-commerce application to help small clothing business.I didn't work on this project from the start yet I made a lot of changes and added features on the front end as well as the backend";
+const work3 =
+  "A landing page for a Bio-degradable Dishware manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application built on React.js";
+
 function Work() {
   const dispatch = useDispatch();
   const [showCustomCursor, setShowCustomCursor] = useState(false);
@@ -140,6 +144,14 @@ function Work() {
             "https://www.laviour.com/",
             true,
             "Updates and management"
+          )}
+          {displayProj(
+            marotia,
+            "Marotia Biowares",
+            work3,
+            "https://www.marotiabiowares.com/",
+            false,
+            "Development"
           )}
         </div>
       </div>
