@@ -36,7 +36,7 @@ function Projects() {
       <p className="homePage__work--heading font_offblack font_20">
         Some personal projects
       </p>
-      <hr className="homePage__work--line" />
+      <hr className="homePage__work--line" style={{ marginBottom: "35px" }} />
       <div
         style={{
           marginTop: "20px",
