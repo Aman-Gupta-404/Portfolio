@@ -7,7 +7,7 @@ import Preloader from "../../Components/Preloader/Preloader";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import Footer from "../../Components/Footer/Footer";
 import { BiLinkExternal } from "react-icons/bi";
-import Projects from "../../Components/ProjectsDone/Projects";
+import Projects from "../../Components/Projects/Projects";
 import { Link, useNavigate } from "react-router-dom";
 import { GrLinkNext } from "react-icons/gr";
 import pransiv from "../../assets/pransiv.png";
@@ -220,45 +220,7 @@ function Home({ loadValue }) {
                 Recent works
               </p>
               <hr className="homePage__work--line" />
-              {/* <div className="homePage__work--section">
-          <div
-            className="homePage__work--section--work"
-            onMouseEnter={(e) => setWorkHover(true)}
-            onMouseLeave={(e) => setWorkHover(false)}
-            id={`${workHover ? "homw_work_true" : null}`}
-          >
-            <div className="homePage__work--left">
-              <p
-                className="homePage__work--left--text font_55 font_black"
-                id={`${workHover ? "homw_work_true--text" : null}`}
-              >
-                Pranciv Concret Pvt Ltd
-              </p>
-            </div>
-            <div className="homePage__work--right">
-              <p className="homePage__work--right--text font_20 font_offblack">
-                Design and developemnt
-              </p>
-            </div>
-          </div>
-          <hr className="homePage__work--line" />
-          <div
-            className="homePage__work--section--work"
-            onMouseEnter={(e) => setWorkHover(true)}
-            onMouseLeave={(e) => setWorkHover(false)}
-          >
-            <div className="homePage__work--left">
-              <p className="homePage__work--left--text font_55 font_black">
-                Laviour Pvt Ltd
-              </p>
-            </div>
-            <div className="homePage__work--right">
-              <p className="homePage__work--right--text font_20 font_offblack">
-                Upgrade and maintenance
-              </p>
-            </div>
-          </div>
-        </div> */}
+
               <div className="workDisplay">
                 {displayProj(
                   pransiv,
@@ -286,7 +248,10 @@ function Home({ loadValue }) {
                 )}
               </div>
             </div>
-            {/* <Projects /> */}
+            <div className="projects_home">
+              {/* <Projects /> */}
+              <Projects />
+            </div>
             {/* Testimonials */}
             <Testimonial />
             {/* home contact section */}

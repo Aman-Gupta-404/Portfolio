@@ -35,6 +35,14 @@
   background-color: lightgrey;
 }
 
+.projects_home {
+  width: 100%;
+  padding: 0px var(--pagePadding);
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 10rem;
+}
+
 /* work card */
 .work__card {
   width: 80%;

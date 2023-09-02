@@ -10,6 +10,7 @@ import Footer from "../../Components/Footer/Footer";
 import Testimonial from "../../Components/Testimonial/Testimonial";
 import { useDispatch } from "react-redux";
 import { setTransitionTrue } from "../../redux/features/animationSlice";
+import Projects from "../../Components/Projects/Projects";
 
 const work1 =
   "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application built on React.js";
@@ -156,6 +157,10 @@ function Work() {
         </div>
       </div>
 
+      {/* <Projects /> */}
+      <div className="projects_home">
+        <Projects />
+      </div>
       {/* testimonial */}
       <div className="work__testimonial">
         <Testimonial />
