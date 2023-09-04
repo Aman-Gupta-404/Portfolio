@@ -11,6 +11,7 @@ import Testimonial from "../../Components/Testimonial/Testimonial";
 import { useDispatch } from "react-redux";
 import { setTransitionTrue } from "../../redux/features/animationSlice";
 import Projects from "../../Components/Projects/Projects";
+import WorkDisplay from "../../Components/WorkDisplay/WorkDisplay";
 
 const work1 =
   "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application built on React.js";
@@ -127,7 +128,7 @@ function Work() {
           .
         </p>
 
-        <p className="work__section__header font_offblack">Client works</p>
+        {/* <p className="work__section__header font_offblack">Client works</p>
         <hr className="work__section__header--line" />
         <div className="workDisplay">
           {displayProj(
@@ -154,8 +155,9 @@ function Work() {
             false,
             "Development"
           )}
-        </div>
+        </div> */}
       </div>
+      <WorkDisplay cursor={false} />
 
       {/* <Projects /> */}
       <div className="projects_home">

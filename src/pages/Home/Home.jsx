@@ -17,6 +17,7 @@ import Testimonial from "../../Components/Testimonial/Testimonial";
 import TransitionLoder from "../../Components/TransitionLoder/TransitionLoder";
 import { setTransitionTrue } from "../../redux/features/animationSlice";
 import { useDispatch } from "react-redux";
+import WorkDisplay from "../../Components/WorkDisplay/WorkDisplay";
 
 const work1 =
   "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application built on React.js";
@@ -174,80 +175,9 @@ function Home({ loadValue }) {
                   </button>
                 </Link>
               </div>
-              {/* <p className="homePage__about--text font_32">
-          Helping businesses build their online presence.
-          <br />
-          Together we will set a new status quo
-        </p> */}
             </div>
             {/* recent work section */}
-            <div
-              className="homepage__work"
-              onMouseEnter={(e) => {
-                setShowCustomCursor(true);
-              }}
-              onMouseLeave={(e) => setShowCustomCursor(false)}
-            >
-              {/* <motion.div
-          className="homePage__work--cursor"
-          variants={workVariant}
-          animate="default"
-        ></motion.div> */}
-              {showCustomCursor ? (
-                // <motion.div
-                //   className="homePage__work--cursor"
-                //   variants={workVariant}
-                //   animate="default"
-                // ></motion.div>
-                <div
-                  className="homePage__work--cursor"
-                  id={workHover ? "homePage__hover" : null}
-                  style={{
-                    left: mousePosition.x - 15 + "px",
-                    top: mousePosition.y - 15 + "px",
-                  }}
-                >
-                  <p className="homePage__work--cursorText font_18 font_white">
-                    {workHover ? (
-                      <span className="homePage__work--cursorText--span">
-                        View <BiLinkExternal id="home_work_icon" />
-                      </span>
-                    ) : null}
-                  </p>
-                </div>
-              ) : null}
-              <p className="homePage__work--heading font_offblack font_20">
-                Recent works
-              </p>
-              <hr className="homePage__work--line" />
-
-              <div className="workDisplay">
-                {displayProj(
-                  pransiv,
-                  "Pransiv Concret Pvt. Ltd.",
-                  work1,
-                  "http://www.pransivconcret.co.in/",
-                  false,
-                  "Design and Development"
-                )}
-                {displayProj(
-                  laviour,
-                  "Laviour Pvt. Ltd.",
-                  work2,
-                  "https://www.laviour.com/",
-                  true,
-                  "Updates and management"
-                )}
-                {displayProj(
-                  marotia,
-                  "Marotia Biowares",
-                  work3,
-                  "https://www.marotiabiowares.com/",
-                  false,
-                  "Development"
-                )}
-              </div>
-            </div>
+            <WorkDisplay cursor={true} />
             <div className="projects_home">
               {/* <Projects /> */}
               <Projects />

@@ -18,11 +18,11 @@ function ProjectCard({ projectName, projectDes, link, github, picture }) {
           <p className="font_16 font_offblack card_des">{projectDes}</p>
         </div>
         <div style={{ display: "flex", gap: "10px" }}>
-          <Link to={link} className="card_button">
+          <Link target="_blank" to={link} className="card_button">
             Demo
             <AiOutlineLink id="card_button--icon" />
           </Link>
-          <Link to={github} className="card_button">
+          <Link target="_blank" to={github} className="card_button">
             Repo
             <FiGithub id="card_button--icon" />
           </Link>

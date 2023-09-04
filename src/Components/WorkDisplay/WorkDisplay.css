@@ -1,0 +1,134 @@
+.homepage__work {
+  width: 100%;
+  padding: 0px var(--pagePadding);
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 10rem;
+}
+
+.projects_home {
+  width: 100%;
+  padding: 0px var(--pagePadding);
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 10rem;
+}
+
+.homePage__work--heading {
+  padding: 10px 30px;
+  /* background-color: red; */
+}
+
+.homePage__work--line {
+  width: 100%;
+  background-color: rgb(134, 134, 134);
+  margin: 10px 0px;
+  height: 0.5px;
+  border: none;
+  border-radius: 20px;
+}
+
+.homePage__work--section--work {
+  padding: 15px 0px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.homePage__work--section--work:hover {
+  transform: scale(1.015);
+}
+
+.homePage__work--section--work:hover,
+.homePage__work--left--text:hover {
+  color: var(--offblack);
+}
+
+.homePage__work--left {
+  width: 70%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.homePage__work--right {
+  width: 30%;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: end;
+}
+
+.homePage__work--left--text {
+  transition: all 0.2s ease-in-out;
+}
+
+/* .homePage__work--left--text:hover {
+  color: var(--offblack);
+} */
+
+.homePage__work--cursor {
+  width: 30px;
+  height: 30px;
+  background-color: var(--black);
+  position: fixed;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  /* transition: height 0.5s ease-in-out; */
+}
+
+#homePage__hover {
+  width: 110px;
+  height: 110px;
+  /* transform: scale(3); */
+  font-size: 1.8rem;
+  /* background-color: var(--primaryOne); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: all 0.5s ease-in-out; */
+}
+
+#home_work_icon {
+  font-size: 2rem;
+}
+
+.homePage__work--cursorText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homePage__work--cursorText--span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.work__card__button {
+  text-decoration: none;
+  font-size: 2rem;
+  margin-top: 30px;
+  color: white;
+  background-color: var(--blue);
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.work__card__button--disabled {
+  text-decoration: none;
+  font-size: 2rem;
+  margin-top: 30px;
+  color: white;
+  background-color: var(--blue);
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: not-allowed;
+  /* pointer-events: none; */
+}
