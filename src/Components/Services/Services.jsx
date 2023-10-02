@@ -55,7 +55,7 @@ function Services() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "0.23 1"],
+    offset: ["0 1", "0.4 1"],
   });
 
   // useEffect(() => {
