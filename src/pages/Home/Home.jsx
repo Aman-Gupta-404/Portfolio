@@ -18,6 +18,9 @@ import TransitionLoder from "../../Components/TransitionLoder/TransitionLoder";
 import { setTransitionTrue } from "../../redux/features/animationSlice";
 import { useDispatch } from "react-redux";
 import WorkDisplay from "../../Components/WorkDisplay/WorkDisplay";
+import Services from "../../Components/Services/Services";
+import Tagline from "../../Components/Tagline/Tagline";
+import WhyUs from "../../Components/WhyUs/WhyUs";
 
 const work1 =
   "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application built on React.js";
@@ -27,7 +30,7 @@ const work3 =
   "A landing page for a Bio-degradable Dishware manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application built on React.js";
 
 function Home({ loadValue }) {
-  console.log("load value is: ", loadValue);
+  // console.log("load value is: ", loadValue);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const scrollRef = useRef(null);
@@ -144,7 +147,9 @@ function Home({ loadValue }) {
         {showPreLoader ? null : (
           <>
             {homeSection()}
-            <div className="hopePage__about">
+            {/* //TODO: Tagline section (check this) */}
+            {/* <Tagline /> */}
+            {/* <div className="hopePage__about">
               <p className="homePage__about--heading font_20 font_offblack">
                 About me
               </p>
@@ -175,12 +180,16 @@ function Home({ loadValue }) {
                   </button>
                 </Link>
               </div>
-            </div>
+            </div> */}
+            {/* Services section */}
+            <Services />
+            <WhyUs />
             {/* recent work section */}
             <WorkDisplay cursor={true} />
             <div className="projects_home">
               {/* <Projects /> */}
-              <Projects />
+              {/*//! check this if required later */}
+              {/* <Projects /> */}
             </div>
             {/* Testimonials */}
             <Testimonial />

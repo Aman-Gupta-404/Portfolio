@@ -11,6 +11,7 @@ import Footer from "../../Components/Footer/Footer";
 import { useDispatch } from "react-redux";
 import { setTransitionTrue } from "../../redux/features/animationSlice";
 import { Link } from "react-router-dom";
+import Services from "../../Components/Services/Services";
 
 function About() {
   const dispatch = useDispatch();
@@ -80,14 +81,15 @@ function About() {
             </div>
           </div>
 
+          {/* <Services /> */}
           <div className="about_services">
             <p className="about__sectionHeading font_offwhite font_18">
-              My services
+              My Experties
             </p>
             <hr className="about__sectionHeader--line" />
 
             <div className="about__services--section">
-              {/* first card */}
+              {/* //! first card */}
               <div className="about__section--card">
                 <div className="about__card--iconHead">
                   <FaLaptopCode id="about__card--icon" />
@@ -109,7 +111,6 @@ function About() {
                   <p className="about__services--point font_black font_18">
                     HTML
                   </p>
-                  {/* <hr className="about__services--line" /> */}
                   <p className="about__services--point font_black font_20">
                     Javascript
                   </p>
@@ -124,7 +125,7 @@ function About() {
                   </p>
                 </div>
               </div>
-              {/* second card */}
+              {/*//! second card */}
               <div className="about__section--card">
                 <div className="about__card--iconHead">
                   <FaDatabase id="about__card--icon" />
@@ -146,7 +147,6 @@ function About() {
                   <p className="about__services--point font_black font_18">
                     Node.Js
                   </p>
-                  {/* <hr className="about__services--line" /> */}
                   <p className="about__services--point font_black font_20">
                     Javascript
                   </p>
@@ -161,7 +161,7 @@ function About() {
                   </p>
                 </div>
               </div>
-              {/* third card */}
+              {/* //! third card */}
               <div className="about__section--card">
                 <div className="about__card--iconHead">
                   <FaGears id="about__card--icon" />
@@ -183,7 +183,6 @@ function About() {
                   <p className="about__services--point font_black font_18">
                     Node.Js
                   </p>
-                  {/* <hr className="about__services--line" /> */}
                   <p className="about__services--point font_black font_20">
                     Mongo Db
                   </p>

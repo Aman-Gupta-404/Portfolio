@@ -83,6 +83,7 @@ function WorkDisplay({ cursor }) {
       <div
         className="work__card"
         id={`${reverse ? "work__card--reverse" : null}`}
+        key={des}
       >
         <div className="work__card--imageContainer">
           <img src={image} alt="image1" className="work__card__img" />
@@ -94,7 +95,7 @@ function WorkDisplay({ cursor }) {
         >
           <p className="work__card__name primaryOne font_24">{name}</p>
           <p className="work__card__gig font_16 font_offwhite">{job}</p>
-          <hr className="work__card--line" />
+          {/* <hr className="work__card--line" /> */}
           <div className="work__card__desCon">
             <p
               className="work__card__des font_black font_20"

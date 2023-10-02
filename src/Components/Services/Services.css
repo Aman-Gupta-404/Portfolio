@@ -1,0 +1,143 @@
+.services {
+  width: 100%;
+  /* margin-bottom: 40px; */
+  padding: 30px var(--pagePadding);
+}
+
+.services__heading {
+  padding-left: 10px;
+}
+.services__line {
+  width: 100%;
+  border: none;
+  background-color: lightgray;
+  height: 1px;
+  margin-bottom: 50px;
+}
+
+/* services card design */
+.services__card {
+  width: 95%;
+  padding: 6rem 4rem;
+  margin: 10px auto 70px auto;
+  gap: 40px;
+  border-radius: 20px;
+  background: rgb(224, 0, 92);
+  background: linear-gradient(
+    45deg,
+    rgba(224, 0, 92, 1) 0%,
+    rgba(139, 31, 188, 1) 25%,
+    rgba(109, 22, 235, 1) 50%,
+    rgba(44, 39, 182, 1) 75%,
+    rgba(0, 68, 224, 1) 100%
+  );
+}
+
+#services__card--reverse {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+#services__card--normal {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: start;
+}
+
+.services__card--left {
+  width: 50%;
+}
+
+.services__card--data-reverse {
+  padding-left: 10%;
+}
+
+.services__card--data-normal {
+  padding-right: 10%;
+}
+
+.services__card--left > h2 {
+  margin-bottom: 15px;
+}
+
+.services__card--left > p {
+  margin-bottom: 10px;
+  /* padding-right: 10%; */
+}
+
+.services__card--list {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+  align-items: center;
+  line-height: 3.8rem;
+}
+.services__card--right {
+  width: 50%;
+}
+
+.services__card--right--image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#services__card--icon {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.services__card--btn {
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  border-radius: 10px;
+  margin-top: 30px;
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.services__card--btn:hover {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  font-size: 2.02rem;
+}
+
+@media only screen and (max-width: 1150px) {
+  .services__card {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .services__card {
+    gap: 10px;
+  }
+  #services__card--reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: start;
+  }
+
+  #services__card--normal {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: start;
+  }
+  .services__card--left {
+    width: 100%;
+  }
+  .services__card--right {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -12,6 +12,7 @@ import { useDispatch } from "react-redux";
 import { setTransitionTrue } from "../../redux/features/animationSlice";
 import Projects from "../../Components/Projects/Projects";
 import WorkDisplay from "../../Components/WorkDisplay/WorkDisplay";
+import Services from "../../Components/Services/Services";
 
 const work1 =
   "A landing page for a Steel manufacturing company, which was used by the client to generate more leads for his company. This application is a frontend application built on React.js";
@@ -157,6 +158,7 @@ function Work() {
           )}
         </div> */}
       </div>
+      <Services />
       <WorkDisplay cursor={false} />
 
       {/* <Projects /> */}

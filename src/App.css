@@ -68,6 +68,9 @@ body {
 .font_offwhite {
   color: rgb(175, 175, 175);
 }
+.font_offwhite2 {
+  color: rgb(227, 227, 227);
+}
 
 .font_blue {
   color: var(--blue);

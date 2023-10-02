@@ -1,0 +1,223 @@
+.whyus {
+  width: 95%;
+  margin: 20px auto;
+  padding: 30px var(--pagePadding);
+}
+
+.whyus__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.whyus__top--subText {
+  /* display: flex; */
+}
+
+.Typewriter__wrapper {
+  font-size: 6.5rem;
+  display: inline;
+}
+
+.Typewriter__cursor {
+  font-size: 6rem;
+}
+
+.whyus__contact--btn {
+  padding: 2rem;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 10px;
+  font-size: 2.4rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.24s all ease-in-out;
+}
+
+.whyus__contact--btn:hover {
+  transform: scale(1.1);
+  -webkit-box-shadow: 4px 4px 16px -6px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 4px 4px 16px -6px rgba(0, 0, 0, 0.68);
+  box-shadow: 4px 4px 16px -6px rgba(0, 0, 0, 0.68);
+}
+
+/* why us card styles */
+.whyus__bottom {
+  width: 100%;
+  /* height: max(300px, max-content); */
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.whyus__card {
+  width: 30%;
+  height: 300px;
+  padding: 0px 2rem;
+  border: 0.4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  -webkit-box-shadow: 0px 0px 16px -2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 16px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 16px -2px rgba(0, 0, 0, 0.1);
+}
+
+.whyus__card--top {
+  width: 100%;
+  height: 25%;
+  position: relative;
+}
+
+.whyus__card--container--icon {
+  width: 27%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100px; */
+  /* border: 1px solid grey; */
+  border-radius: 5px;
+  position: absolute;
+  top: -30%;
+  background-color: white;
+  transition: all 0.1s ease-in-out;
+  -webkit-box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.3);
+}
+
+.whyus__card--icon {
+  width: 90%;
+  height: 90%;
+}
+
+.whyus__card--bottom {
+  height: 70%;
+}
+
+.whyus__card--heading {
+  margin-bottom: 1rem;
+}
+
+.whyus__card:hover {
+  border: 1px solid var(--blue);
+}
+
+.whyus__card:hover .whyus__card--container--icon {
+  background-color: var(--blue);
+  border: 1.3px solid var(--blue);
+}
+
+/* responsive designs */
+@media only screen and (max-width: 2872px) {
+  .whyus__card {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1530px) {
+  .whyus__card {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .whyus__bottom {
+    gap: 1rem;
+  }
+  .whyus__card {
+    width: 32%;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .whyus__card {
+    height: 360px;
+  }
+  .whyus__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: start;
+  }
+  .whyus__card--top {
+    width: 100%;
+    height: 15%;
+    position: relative;
+  }
+  .whyus__card--bottom {
+    height: 85%;
+  }
+  .whyus__bottom {
+    gap: 1rem;
+  }
+  .whyus__card {
+    width: 33%;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .whyus {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .whyus__bottom {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .whyus__card {
+    width: 45%;
+    height: 300px;
+  }
+  .whyus__card--top {
+    width: 100%;
+    height: 20%;
+    position: relative;
+  }
+  .whyus__card--bottom {
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .whyus__card {
+    width: 90%;
+    height: 300px;
+  }
+  .whyus__bottom {
+    gap: 60px;
+    justify-content: center;
+  }
+  .whyus__card--top {
+    height: 30%;
+  }
+  .whyus__card--bottom {
+    height: 70%;
+  }
+  .whyus__card--container--icon {
+    width: 15%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .whyus__card {
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .whyus__card--container--icon {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .whyus__card--container--icon {
+    width: 30%;
+  }
+}

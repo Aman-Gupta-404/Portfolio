@@ -28,22 +28,22 @@ const testimonials = [
 function Testimonial() {
   const renderTestimonialCard = (name, designation, message, image) => {
     return (
-      <div className="testimonial__card">
+      <div className="testimonial__card" key={name}>
         {/* <div className="testimonial__quotes"> */}
         {/* <BiSolidQuoteAltLeft id="testimonialQuote" /> */}
         {/* </div> */}
         {/* <div className="testimonial__image"> */}
         {/* </div> */}
-        <img src={image} alt="" className="testimonial__image--img" />
-        <div className="testimonial__message">
-          <p className="testimonial__message--text font_18 text_black">
-            {message}
-          </p>
-        </div>
+        {/* <img src={image} alt="" className="testimonial__image--img" /> */}
         <div className="testimonial__footer">
           <p className="testimonial__name font_16 primaryOne">{name}</p>
           <p className="testimonial__name font_16 font_offwhite">
             {designation}
+          </p>
+        </div>
+        <div className="testimonial__message">
+          <p className="testimonial__message--text font_18 font_offblack">
+            {message}
           </p>
         </div>
       </div>

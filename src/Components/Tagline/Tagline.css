@@ -1,0 +1,52 @@
+.tagline {
+  width: 90%;
+  margin: auto;
+  padding: 30px var(--pagePadding);
+}
+
+/* .tagline__div {
+
+} */
+
+.timeline__forward {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.timeline__reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.tagline__div--left {
+  width: 40%;
+}
+
+.tagline__div--right {
+  width: 60%;
+}
+
+.tagline__text--right {
+  text-align: end;
+}
+
+.tagline__image {
+  width: 80%;
+}
+
+.tagline__image__reverse {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.tagline__image__forward {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
