@@ -5,6 +5,9 @@ import performanceIcon from "../../assets/cards/performance.png";
 import responsiveIcon from "../../assets/cards/responsive.png";
 import seoIcon from "../../assets/cards/seo.png";
 import Reveal from "../../Elements/Reveal/Reveal";
+import { Link } from "react-router-dom";
+import { setTransitionTrue } from "../../redux/features/animationSlice";
+import { useDispatch } from "react-redux";
 
 const data = [
   {
@@ -28,6 +31,8 @@ const data = [
 ];
 
 function WhyUs() {
+  const dispatch = useDispatch();
+
   return (
     <div className="whyus">
       {/* the first is the the text with typewriting effect */}
@@ -52,7 +57,12 @@ function WhyUs() {
           </p>
         </div>
         <div>
-          <button className="whyus__contact--btn">Lets work together!</button>
+          <Link
+            to={"/contact"}
+            onClick={() => dispatch(setTransitionTrue("contact"))}
+          >
+            <button className="whyus__contact--btn">Lets work together!</button>
+          </Link>
         </div>
       </div>
       {/* The second is the website with the cards of deliverables */}
