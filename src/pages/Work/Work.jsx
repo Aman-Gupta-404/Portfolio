@@ -158,13 +158,13 @@ function Work() {
           )}
         </div> */}
       </div>
-      <Services />
       <WorkDisplay cursor={false} />
+      <Services />
 
       {/* <Projects /> */}
-      <div className="projects_home">
+      {/* <div className="projects_home">
         <Projects />
-      </div>
+      </div> */}
       {/* testimonial */}
       <div className="work__testimonial">
         <Testimonial />
