@@ -39,7 +39,7 @@ const data = [
     link: "http://www.pransivconcret.co.in/",
     reverse: false,
     job: "Design & Development",
-    status: true,
+    status: false,
   },
   {
     image: laviour,
