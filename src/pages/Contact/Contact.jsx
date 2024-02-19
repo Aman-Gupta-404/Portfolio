@@ -117,7 +117,7 @@ function Contact() {
         // send message
         emailjs
           .send(
-            "service_igkrbwu",
+            "service_cuw01zg",
             "template_1ssjewl",
             _data,
             "KpXi-QiHIztwKIVCQ"
