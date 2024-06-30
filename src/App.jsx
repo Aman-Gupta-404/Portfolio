@@ -47,7 +47,7 @@ function App() {
       setPageTransitionValue(false);
     }, 2000);
   };
-
+  // just a test comment
   const handleScroll = () => {
     const position = window.pageYOffset;
     // setScrollPosition(position);
